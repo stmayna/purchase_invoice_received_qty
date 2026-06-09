@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purchase Invoice Received Quantity Validation</title>
+</head>
+<body>
+    <h1>Purchase Invoice Received Quantity Validation</h1>
+
+    <h2>Description</h2>
+    <p>
+        This Odoo module prevents users from billing quantities greater than
+        the received quantities for purchase orders using 3-way matching
+        (Based on received quantities).
+    </p>
+
+    <p>
+        The validation is applied on vendor bills linked to purchase order
+        lines to ensure invoice quantities never exceed the quantities
+        received in stock operations.
+    </p>
+
+    <h2>Features</h2>
+    <ul>
+        <li>Prevent over billing on vendor bills</li>
+        <li>Support 3-way matching purchase orders</li>
+        <li>Validate billed quantity against received quantity</li>
+        <li>Clear validation error messages for users</li>
+        <li>Works seamlessly with Purchase and Inventory modules</li>
+    </ul>
+
+    <h2>How to Install</h2>
+    <ul>
+        <li>Add the module to your Odoo addons directory.</li>
+        <li>Restart Odoo.</li>
+        <li>Update Apps List.</li>
+        <li>Install the module.</li>
+    </ul>
+
+    <h2>How It Works</h2>
+    <p>
+        When a user posts a vendor bill for a purchase order
+        configured with <strong>3-way matching</strong>, Odoo will validate
+        that the billed quantity does not exceed the received quantity.
+    </p>
+
+    <p>
+        If the billed quantity is greater than the received quantity,
+        the system will raise a validation error and prevent the action.
+    </p>
+
+    
+    <h4>Installation</h4>
+    <p>
+        Install the module from the Apps menu.
+    </p>
+
+    <div class="figure" style="text-align: center; margin-bottom: 24px;">
+        <img
+            alt="Module Installation"
+            src="purchase_invoice_received_qty_addons.png"
+            style="max-width: 100%; border: 1px solid #dcdcdc; border-radius: 8px; padding: 4px;"
+        />
+    </div>
+
+    <h4>Purchase Order Example</h4>
+    <p>
+        Example of a purchase order using received quantity validation.
+    </p>
+
+    <div class="figure" style="text-align: center; margin-bottom: 24px;">
+        <img
+            alt="Purchase Order Example"
+            src="purchase_invoice_received_qty_po.png"
+            style="max-width: 100%; border: 1px solid #dcdcdc; border-radius: 8px; padding: 4px;"
+        />
+    </div>
+
+    <h4>Validation Example</h4>
+    <p>
+        The system prevents vendor bills with quantities greater than the received quantity.
+    </p>
+
+    <div class="figure" style="text-align: center; margin-bottom: 24px;">
+        <img
+            alt="Vendor Bill Validation Example"
+            src="purchase_invoice_received_qty_validations.png"
+            style="max-width: 100%; border: 1px solid #dcdcdc; border-radius: 8px; padding: 4px;"
+        />
+    </div>
+
+    <h2>Dependencies</h2>
+    <ul>
+        <li>account</li>
+        <li>purchase</li>
+        <li>purchase_stock</li>
+    </ul>
+
+    <h2>Author</h2>
+    <p>
+        Siti Mayna<br/>
+        <a href="https://github.com/stmayna">https://github.com/stmayna</a>
+    </p>
+</body>
+</html>
