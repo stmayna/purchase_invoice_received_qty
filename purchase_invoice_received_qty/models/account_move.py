@@ -21,6 +21,7 @@ class PurchaseInvoiceAccountMove(models.Model):
                 line.move_id.move_type != 'in_invoice'
                 or not line.purchase_line_id
                 or line.purchase_line_id.product_id.purchase_method != 'receive'
+                or line.display_type != 'product'
             ):
 
                 continue
