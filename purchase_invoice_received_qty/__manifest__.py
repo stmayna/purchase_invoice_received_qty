@@ -24,7 +24,7 @@ The module extends account.move validation logic for vendor bills
 linked to purchase order lines.
     """,
     "author": "Mayna,Diandra",
-    "website": "https://github.com/stmayna",
+    "website": "https://github.com/stmayna/odoo_shop_custom_development",
     "license": "LGPL-3",
     "depends": [
         "account",
